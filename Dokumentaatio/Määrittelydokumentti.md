@@ -23,4 +23,5 @@ RSA-salausalgoritmin toteutuksessa käytetyillä yllä mainituilla algoritmeilla
 Perusteellinen esitys RSA-salausalgoritmista, etenkin sen tehokkaan toteutuksen osalta, löytyy [DI Management Services](https://www.di-mgt.com.au) -yrityksen kotisivuilta.
 
 Opinto-ohjelma: tietojenkäsittelytieteen kandidaatti (TKT)
+
 Projektin dokumentaatiossa käytetty kieli: suomi

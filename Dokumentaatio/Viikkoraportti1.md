@@ -14,7 +14,7 @@ Suurin huolenaiheeni liittyy sen varmistamiseen, että olen ymmärtänyt RSA-sal
 
 ## Tuntikirjanpito
 
-TI: 1,5 tuntia
-KE: 4 tuntia
-TO: 4 tuntia
-SU: 2 tuntia
+* TI: 1,5 tuntia
+* KE: 4 tuntia
+* TO: 4 tuntia
+* SU: 2 tuntia

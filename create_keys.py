@@ -1,3 +1,4 @@
+import algorithms
 from secrets import randbelow
 
 with open('prime_numbers', 'r') as file_object:
@@ -12,6 +13,13 @@ while p == q:
 print(p)
 print(q)
 
+#tarkistetaan alkuluvullisuus
+prime_status = False
+while not prime_status:
+    if algorithms.Miller_Rabin_test(p):
+        print(f'on alkuluku: {p}')
+        prime_status = True
+
 N = p * q
 print(N)
 
@@ -19,16 +27,6 @@ N_ = (p-1) * (q-1)
 print(N_)
 
 #selvitetään alkuluvun suhteellisuus
-def check_GCD(e_max, e_min): #check Greatest Common Divisor
-    result = -1
-    while result != 0:
-        #print(f'{e_max} {e_min} {result}')
-        e_temp = e_max // e_min
-        result = e_max - e_min * e_temp
-        e_max = e_min
-        e_min = result
-    #viimeisin nollasta poikkeava on yhteinen tekijä
-    return(e_max)
 
 gcd = 0
 while gcd != 1:
@@ -36,7 +34,7 @@ while gcd != 1:
     while e_candidate < 2:
         e_candidate = randbelow(N_)
     print(e_candidate)
-    gcd = check_GCD(N_, e_candidate)
+    gcd = algorithms.Euclidean_algorithm(N_, e_candidate)
     if gcd != 1:
         print(f'ei kelpaa: {e_candidate}')
 print(f'löytyi e: {e_candidate}')
@@ -51,10 +49,10 @@ e = e_candidate
 #viimein etsitään luku d
 while True:
     d_candidate = randbelow(N)
-    print(d_candidate)
+    #print(d_candidate)
     if (d_candidate * e - 1) % N_ == 0:
         break
-    print(f'ei kelpaa: {d_candidate}')
+    #print(f'ei kelpaa: {d_candidate}')
 print(f'löytyi d: {d_candidate}')
 
 d = d_candidate

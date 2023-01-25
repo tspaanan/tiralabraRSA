@@ -9,6 +9,14 @@ cli_parser.add_argument('--create_keys', action='store_true', help='create new R
 cli_args = cli_parser.parse_args()
 
 if cli_args.create_keys:
-    print('toimii')
+    #print('toimii')
+    #testataan alkulukujen validointia M-R testillä
+    import algorithms
+    alkuluvut = []
+    for i in range(20000):
+        print(i)
+        if algorithms.Miller_Rabin_test(i,11):
+            alkuluvut.append(i)
+    print(len(alkuluvut))
 
 print('loppu')

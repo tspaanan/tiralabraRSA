@@ -1,0 +1,3 @@
+[run]
+source = .
+omit = ./tiralabraRSA_CLI.py

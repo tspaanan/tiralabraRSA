@@ -1,0 +1,1 @@
+#key luokka: key sisältää N ja salaus/purkueksponentin

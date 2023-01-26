@@ -1,4 +1,5 @@
 __*
+.coverage
 *.html
 *.swp
 *.txt

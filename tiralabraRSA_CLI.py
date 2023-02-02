@@ -6,7 +6,7 @@ from create_keys import create_new_RSA_keys
 cli_parser = argparse.ArgumentParser(description='CLI for tiralabraRSA: create RSA keys, encrypt and decrypt messages')
 
 cli_parser.add_argument('--create_keys', action='store_true', help='create new RSA keys with variable length')
-cli_parser.add_argument('--key_length', action='store', type=int, help='length of RSA keys in bits')
+cli_parser.add_argument('--key_length', action='store', type=int, default=1024, help='length of RSA keys in bits (default: 1024')
 
 cli_args = cli_parser.parse_args()
 

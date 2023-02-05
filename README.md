@@ -8,7 +8,10 @@ Helsingin yliopiston tietojenkäsittelytieteen laitoksen keväällä 2023 järje
 
 [Testikattavuusraportti](https://github.com/tspaanan/tiralabraRSA/blob/main/Dokumentaatio/Coverage_report.html)
 
+[Testausdokumentti](https://github.com/tspaanan/tiralabraRSA/blob/main/Dokumentaatio/Testausdokumentti.md)
+
 ## Viikkoraportit
 
 1. [Viikkoraportti 1](https://github.com/tspaanan/tiralabraRSA/blob/main/Dokumentaatio/Viikkoraportti1.md)
 2. [Viikkoraportti 2](https://github.com/tspaanan/tiralabraRSA/blob/main/Dokumentaatio/Viikkoraportti2.md)
+3. [Viikkoraportti 3](https://github.com/tspaanan/tiralabraRSA/blob/main/Dokumentaatio/Viikkoraportti3.md)

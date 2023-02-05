@@ -33,7 +33,7 @@ def create_new_RSA_keys(key_length):
             break
 
     print(f'N: {N}, N_: {N_}, e: {e}, d: {d}')
-    secret_key = key_objects.SecretKey(N,e)
+    secret_key = key_objects.SecretKey(N,d)
     print(f'Created {secret_key}')
-    public_key = key_objects.PublicKey(N,d)
+    public_key = key_objects.PublicKey(N,e)
     print(f'Created {public_key}')

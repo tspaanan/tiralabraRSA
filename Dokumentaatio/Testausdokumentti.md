@@ -2,11 +2,11 @@
 
 | Name                |    Stmts |     Miss |   Branch |   BrPart |   Cover |
 |-------------------- | -------: | -------: | -------: | -------: | ------: |
-| Testit/unittests.py |       23 |        1 |        2 |        1 |     92% |
-| algorithms.py       |       50 |        3 |       20 |        3 |     91% |
-| create\_keys.py     |       25 |       25 |        8 |        0 |      0% |
-| key\_objects.py     |        0 |        0 |        0 |        0 |    100% |
-|           **TOTAL** |   **98** |   **29** |   **30** |    **4** | **68%** |
+| Testit/unittests.py |       29 |        1 |        6 |        1 |     94% |
+| algorithms.py       |       50 |        2 |       20 |        2 |     94% |
+| create\_keys.py     |       30 |       21 |        8 |        0 |     29% |
+| key\_objects.py     |       20 |        8 |        0 |        0 |     60% |
+|           **TOTAL** |  **129** |   **32** |   **34** |    **3** | **75%** |
 
 (Sama informaatio eri muodossa sisältyy myös [Testikattavuusraporttiin](https://github.com/tspaanan/tiralabraRSA/blob/main/Dokumentaatio/Coverage_report.html))
 

@@ -42,3 +42,5 @@ def create_new_RSA_keys(key_length):
     with open('public_key', 'w') as pub_key:
         pub_key.write(f'{public_key.modulus_n}\n{public_key.exponent}\n')
     print(f'Created {public_key}')
+
+    return (secret_key,public_key)

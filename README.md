@@ -10,6 +10,8 @@ Helsingin yliopiston tietojenkäsittelytieteen laitoksen keväällä 2023 järje
 
 [Testausdokumentti](https://github.com/tspaanan/tiralabraRSA/blob/main/Dokumentaatio/Testausdokumentti.md)
 
+[Toteutusdokumentti](https://github.com/tspaanan/tiralabraRSA/blob/main/Dokumentaatio/Toteutusdokumentti.md)
+
 ## Viikkoraportit
 
 1. [Viikkoraportti 1](https://github.com/tspaanan/tiralabraRSA/blob/main/Dokumentaatio/Viikkoraportti1.md)

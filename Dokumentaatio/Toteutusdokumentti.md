@@ -13,10 +13,10 @@ Ohjelma luo satunnaisen RSA-avainparin, joka tallennetaan tiedostoihin secret_ke
 
 * Viestin salaaminen
 ```
-python3 tiralabraRSA_CLI.py --encrypt --key public_key --message clear_text_message
+python3 tiralabraRSA_CLI.py --encrypt --key public_key --message clear_text_message --output encrypted_message
 ```
 
-Ohjelma salaa tiedoston clear_text_message tesktimuotoisen sisällön salausavaimella public_key. Salattu sisältö tallennetaan tiedostoon encrypted_message.
+Ohjelma salaa merkkijonon 'clear_text_message' salausavaimella public_key. Salattu sisältö tallennetaan tiedostoon encrypted_message.
 
 * Viestin purkaminen
 ```

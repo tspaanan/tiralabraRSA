@@ -1,6 +1,8 @@
 import key_objects
 from message_objects import Message
 
+#sis. kokeiluja ja print-debuggausta, mutta toimii!
+
 def encrypt_message(message, key):
     message_content_str = message.message_content
     message_content_byt = message_content_str.encode()

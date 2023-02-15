@@ -24,7 +24,6 @@ def create_new_RSA_keys(key_length):
                 e_candidate = randbelow(N_)
             gcd = algorithms.Euclidean_algorithm(N_, e_candidate)
         e = e_candidate
-        #e = 5
 
         #Constructing secret key exponent d that is modular multiplicative inversion of e mod N_
         #Secret key exponent d has to be a positive integer
@@ -33,7 +32,6 @@ def create_new_RSA_keys(key_length):
             d = d_candidate
             break
 
-    print(f'N: {N}, N_: {N_}, e: {e}, d: {d}')
     secret_key = key_objects.SecretKey(N,d)
     with open('secret_key', 'w') as sec_key:
         sec_key.write(f'{secret_key.modulus_n}\n{secret_key.exponent}\n')

@@ -20,7 +20,7 @@ Ohjelma salaa merkkijonon 'clear_text_message' salausavaimella public_key. Salat
 
 * Viestin purkaminen
 ```
-python3 tiralabraRSA_CLI.py --decrypt --key secret_key --message encrypted_message
+python3 tiralabraRSA_CLI.py --decrypt --key secret_key --input encrypted_message --output decrypted_message
 ```
 
 Ohjelma purkaa tiedoston encrypted_message tekstimuotoisen sisällön salausavaimella secret_key. Selväkielinen viesti tulostetaan näytölle.

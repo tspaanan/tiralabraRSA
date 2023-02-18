@@ -41,7 +41,7 @@ if cli_args.decrypt:
         message_int = int(enc_message_file.readline().strip())
     dec_message = decrypt_message(Message(message_int,True),key_object)
     with open(cli_args.output,'w') as dec_message_file:
-        dec_message_file.write(f'{str(dec_message.message_content)}\n')
+        dec_message_file.write(f'{dec_message.message_content}\n')
     print(dec_message)
 
 #testing random padding

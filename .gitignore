@@ -2,3 +2,5 @@ __*
 .coverage
 *.swp
 *.txt
+*_key
+*_message

@@ -41,7 +41,7 @@ class TestAlgorithms(unittest.TestCase):
 class TestEncryptions(unittest.TestCase):
 
     def setUp(self):
-        #Setting up 1024-bit RSA key pair, message length restricted to 127 bytes
+        #Setting up 1024-bit RSA key pair, message length restricted to 127 bytes (for safe margin)
         self.keys_for_testing = create_keys.create_new_RSA_keys(1024)
         self.message_for_testing = ''.join(secrets.choice(string.ascii_letters) for _ in range(127))
         self.encrypted_message_for_testing = encryptions.encrypt_message(message_objects.Message(self.message_for_testing,False),self.keys_for_testing[0])

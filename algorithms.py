@@ -1,3 +1,4 @@
+from math import isqrt
 from secrets import randbelow
 
 #Euclidean algorithm calculates the Greatest Common Divisor of two integers
@@ -49,7 +50,14 @@ def Miller_Rabin_test(prime_candidate, nbr_of_rounds):
     if prime_candidate < 2 or prime_candidate % 2 == 0:
         return False
     
-    #bound-and-branch optimointi tähän
+    #pruning prime_candidates before Miller-Rabin test
+    with open('prime_numbers','r') as file_object:
+        list_of_primes = [int(line.strip()) for line in file_object]
+        for prime in list_of_primes[:500]:
+            if prime > isqrt(prime_candidate):
+                break
+            if prime_candidate % prime == 0:
+                return False
     
     previous_even = prime_candidate - 1
     

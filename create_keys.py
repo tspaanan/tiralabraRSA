@@ -5,7 +5,7 @@ from secrets import randbelow,randbits
 def _create_prime_number(prime_number_length):
     while True:
         prime_candidate = randbits(prime_number_length)
-        if algorithms.Miller_Rabin_test(prime_candidate,11):
+        if algorithms.Miller_Rabin_test(prime_candidate,40):
             return prime_candidate
 
 def create_new_RSA_keys(key_length):

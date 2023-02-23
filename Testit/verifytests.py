@@ -16,10 +16,10 @@ class TestVerifyCreatedKeys(unittest.TestCase):
         msg_length_byt = min(secret_key.modulus_n.bit_length(),secret_key.exponent.bit_length(),public_key.exponent.bit_length()) // 8
         for _ in range(10):
             long_rnd_message = ''.join(secrets.choice(string.ascii_letters) for _ in range(msg_length_byt))
-            encrypted_message = encrypt_message(Message(long_rnd_message,False),RSA_keys[0],True)
+            encrypted_message = encrypt_message(Message(long_rnd_message,False),RSA_keys[0],True,False)
             decrypted_message = decrypt_message(encrypted_message,RSA_keys[1],True)
             self.assertEqual(decrypted_message.message_content,long_rnd_message)
-            encrypted_message = encrypt_message(Message(long_rnd_message,False),RSA_keys[1],True)
+            encrypted_message = encrypt_message(Message(long_rnd_message,False),RSA_keys[1],True,False)
             decrypted_message = decrypt_message(encrypted_message,RSA_keys[0],True)
             self.assertEqual(decrypted_message.message_content,long_rnd_message)
 

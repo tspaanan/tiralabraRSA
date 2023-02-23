@@ -37,22 +37,29 @@ class TestAlgorithms(unittest.TestCase):
         self.assertFalse(algorithms.Miller_Rabin_test(35742549198872617291353508656626642565,40))
         self.assertTrue(algorithms.Miller_Rabin_test(359334085968622831041960188598043661065388726959079837,40))
         self.assertFalse(algorithms.Miller_Rabin_test(359334085968622831041960188598043661065388726959079835,40))
+        #Product of two Bell primes should not a prime number
+        self.assertFalse(algorithms.Miller_Rabin_test(359334085968622831041960188598043661065388726959079837 * 35742549198872617291353508656626642567,40))
 
 class TestEncryptions(unittest.TestCase):
 
     def setUp(self):
-        #Setting up 1024-bit RSA key pair, message length restricted to 127 bytes (for safe margin)
+        #Setting up 1024-bit RSA key pair, message length restricted to 128 bytes - 8 bytes for padding - 3 bytes for safe margin
         self.keys_for_testing = create_keys.create_new_RSA_keys(1024)
-        self.message_for_testing = ''.join(secrets.choice(string.ascii_letters) for _ in range(127))
-        self.encrypted_message_for_testing = encryptions.encrypt_message(message_objects.Message(self.message_for_testing,False),self.keys_for_testing[0])
+        self.message_for_testing = ''.join(secrets.choice(string.ascii_letters) for _ in range(117))
+        self.encrypted_message_for_testing = encryptions.encrypt_message(message_objects.Message(self.message_for_testing,False),self.keys_for_testing[0],random_padding=False)
+        self.encrypted_padded_message_for_testing = encryptions.encrypt_message(message_objects.Message(self.message_for_testing,False),self.keys_for_testing[0])
 
     def test_first_encrypt_message(self):
         self.assertTrue(self.encrypted_message_for_testing.encrypted)
+        self.assertTrue(self.encrypted_padded_message_for_testing.encrypted)
 
     def test_second_decrypt_message(self):
         self.decrypted_message_for_testing = encryptions.decrypt_message(self.encrypted_message_for_testing,self.keys_for_testing[1])
+        self.decrypted_unpadded_message_for_testing = encryptions.decrypt_message(self.encrypted_padded_message_for_testing,self.keys_for_testing[1])
         self.assertFalse(self.decrypted_message_for_testing.encrypted)
         self.assertEqual(self.decrypted_message_for_testing.message_content,self.message_for_testing)
+        self.assertFalse(self.decrypted_unpadded_message_for_testing.encrypted)
+        self.assertEqual(self.decrypted_unpadded_message_for_testing.message_content,self.message_for_testing)
 
 class TestKeyCreation(unittest.TestCase):
 

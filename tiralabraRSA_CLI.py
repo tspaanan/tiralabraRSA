@@ -3,6 +3,11 @@ from create_keys import create_new_RSA_keys
 from encryptions import encrypt_message,decrypt_message
 import key_objects
 from message_objects import Message
+
+import unittest
+import Testit.verifytests
+import io
+
 #debug
 from encryptions import encrypt_with_random_padding,decrypt_with_random_padding
 
@@ -17,11 +22,17 @@ cli_parser.add_argument('--key', action='store', help='key file used for encrypt
 cli_parser.add_argument('--input', action='store', help='input file used to read the message from')
 cli_parser.add_argument('--output', action='store', help='output file used to write the results into')
 cli_parser.add_argument('--padding', action='store_true', help='whether to use random padding in messages for security or not')
+cli_parser.add_argument('--verify', action='store_true', help='verify the validity of new RSA keys')
 
 cli_args = cli_parser.parse_args()
 
 if cli_args.create_keys:
-    create_new_RSA_keys(cli_args.key_length)
+    keys = create_new_RSA_keys(cli_args.key_length)
+    if cli_args.verify:
+        verify_tests = unittest.TestLoader().loadTestsFromModule(Testit.verifytests)
+        verify_results = unittest.TextTestRunner(stream=io.StringIO(),buffer=True).run(verify_tests)
+        if not verify_results.wasSuccessful():
+            print('Created keys have not passed verification. Please create a new key pair.')
 
 if cli_args.encrypt:
     with open(cli_args.key,'r') as key_file:

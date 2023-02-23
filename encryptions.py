@@ -1,7 +1,7 @@
 import key_objects
 from message_objects import Message
 
-def encrypt_message(message, key):
+def encrypt_message(message, key, suppress_output=False):
     message_content_str = message.message_content
     message_content_byt = message_content_str.encode()
     
@@ -10,15 +10,17 @@ def encrypt_message(message, key):
     message_content_int = int.from_bytes(message_content_byt,'big')
     encrypted_message_content_int = pow(message_content_int,key.exponent,key.modulus_n)
     encrypted_message = Message(encrypted_message_content_int,True)
-    print('Encrypted message')
+    if not suppress_output:
+        print('Encrypted message')
     return encrypted_message
 
-def decrypt_message(message, key):
+def decrypt_message(message, key, suppress_output=False):
     message_content_int = message.message_content
     decrypted_message_content_int = pow(message_content_int,key.exponent,key.modulus_n)
     decrypted_message_content_byt = decrypted_message_content_int.to_bytes((decrypted_message_content_int.bit_length()+7)//8,'big')
     decrypted_message = Message(decrypted_message_content_byt.decode(),False)
-    print('Decrypted message')
+    if not suppress_output:
+        print('Decrypted message')
     return decrypted_message
 
 #testing random padding

@@ -10,7 +10,7 @@ def encrypt_message(message, key, suppress_output=False, random_padding=True):
     if random_padding:
         padding_length = max(8, (key.modulus_n.bit_length() // 8) - len(message_content_byt) - 3)
         PS = ''.join(secrets.choice(string.ascii_letters) for _ in range(padding_length)).encode()
-        EM = int.to_bytes(0,1,'big') + int.to_bytes(2,1,'big') + PS + int.to_bytes(0,1,'big') + message.message_content.encode()
+        EM = int.to_bytes(0,1,'big') + int.to_bytes(2,1,'big') + PS + int.to_bytes(0,1,'big') + message_content_byt
         message_content_int = int.from_bytes(EM,'big')
     else:
         message_content_int = int.from_bytes(message_content_byt,'big')

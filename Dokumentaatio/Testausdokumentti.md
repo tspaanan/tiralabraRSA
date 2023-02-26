@@ -1,16 +1,13 @@
 # Testausdokumentti
 
-| Name                    |    Stmts |     Miss |   Branch |   BrPart |   Cover |
-|------------------------ | -------: | -------: | -------: | -------: | ------: |
-| Testit/endtoendtests.py |       17 |        1 |        2 |        1 |     89% |
-| Testit/unittests.py     |       29 |        1 |        6 |        1 |     94% |
-| algorithms.py           |       50 |        2 |       20 |        2 |     94% |
-| create\_keys.py         |       35 |        0 |       12 |        0 |    100% |
-| encryptions.py          |       18 |        0 |        0 |        0 |    100% |
-| key\_objects.py         |       20 |        0 |        0 |        0 |    100% |
-| message\_objects.py     |        7 |        1 |        0 |        0 |     86% |
-|               **TOTAL** |  **176** |    **5** |   **40** |    **4** | **96%** |
-
+| Name                |    Stmts |     Miss |   Branch |   BrPart |   Cover |
+|-------------------- | -------: | -------: | -------: | -------: | ------: |
+| algorithms.py       |       58 |        2 |       31 |        2 |     96% |
+| create\_keys.py     |       34 |        0 |       12 |        0 |    100% |
+| encryptions.py      |       30 |        0 |       10 |        2 |     95% |
+| key\_objects.py     |       20 |        0 |        0 |        0 |    100% |
+| message\_objects.py |        6 |        1 |        0 |        0 |     83% |
+|           **TOTAL** |  **148** |    **3** |   **53** |    **4** | **97%** |
 
 (Sama informaatio eri muodossa sisältyy myös [Testikattavuusraporttiin](https://github.com/tspaanan/tiralabraRSA/blob/main/Dokumentaatio/Coverage_report.html))
 

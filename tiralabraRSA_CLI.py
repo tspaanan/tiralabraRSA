@@ -8,9 +8,6 @@ import unittest
 import Testit.verifytests
 import io
 
-#debug
-from encryptions import encrypt_with_random_padding,decrypt_with_random_padding
-
 cli_parser = argparse.ArgumentParser(description='CLI for tiralabraRSA: create RSA keys, encrypt and decrypt messages')
 
 cli_parser.add_argument('--create_keys', action='store_true', help='create new RSA keys with variable length')
@@ -55,13 +52,3 @@ if cli_args.decrypt:
     with open(cli_args.output,'w') as dec_message_file:
         dec_message_file.write(f'{dec_message.message_content}\n')
     print(dec_message)
-
-#testing random padding
-#if cli_args.padding:
-    #with open(cli_args.key,'r') as key_file:
-        #key_object = key_objects.GenericKey(int(key_file.readline().strip()),int(key_file.readline().strip()))
-    #padded_message = encrypt_with_random_padding(Message("padding_testi",False),key_object)
-    #print(padded_message)
-    #with open('public_key','r') as key_file:
-        #key_object = key_objects.GenericKey(int(key_file.readline().strip()),int(key_file.readline().strip()))
-    #print(decrypt_with_random_padding(padded_message,key_object))

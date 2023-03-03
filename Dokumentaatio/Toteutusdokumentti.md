@@ -4,27 +4,6 @@
 
 Ohjelma toimii erilaisten komentoriviltä annettujen nimettyjen parametrien pohjalta. Komentorivitoiminnallisuuden toteutuksessa on käytetty Pythonin argparse-moduulia.
 
-* Uusien RSA-avainten luominen
-```
-python3 tiralabraRSA_CLI.py --create_keys --key_length 1024
-```
-
-Ohjelma luo satunnaisen RSA-avainparin, joka tallennetaan tiedostoihin secret_key ja public_key.
-
-* Viestin salaaminen
-```
-python3 tiralabraRSA_CLI.py --encrypt --key public_key --message clear_text_message --output encrypted_message
-```
-
-Ohjelma salaa merkkijonon 'clear_text_message' salausavaimella public_key. Salattu sisältö tallennetaan tiedostoon encrypted_message.
-
-* Viestin purkaminen
-```
-python3 tiralabraRSA_CLI.py --decrypt --key secret_key --input encrypted_message --output decrypted_message
-```
-
-Ohjelma purkaa tiedoston encrypted_message tekstimuotoisen sisällön salausavaimella secret_key. Selväkielinen viesti tulostetaan näytölle.
-
 Ohjelman toiminnallisuus on jaoteltu eri moduuleihin, joista tärkeimmät ovat komentorivikäyttöliittymästä vastaava tiralabraRSA_CLI.py, algoritmit sisältävä algorithms.py, avainten luomisesta vastaava create_keys.py, sekä salaus- ja purkutoiminnallisuuden hoitava encryptions.py.
 
 ## Saavutetut aika- ja tilavaativuudet

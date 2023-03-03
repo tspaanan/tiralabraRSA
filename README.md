@@ -1,6 +1,7 @@
 # tiralabraRSA
 
 [![linting: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/PyCQA/pylint)
+![GHA workflow badge](https://github.com/tspaanan/tiralabraRSA/workflows/CI/badge.svg)
 
 Helsingin yliopiston tietojenkäsittelytieteen laitoksen keväällä 2023 järjestelmän harjoituskurssin 'Tietorakenteet ja algoritmit' harjoitustyö.
 

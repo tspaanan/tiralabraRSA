@@ -1,8 +1,8 @@
 # Käyttöohje
 
-Ohjelman komentorivikäyttöliittymä toimii samalla periaatteella kuin tavanomaiset Unix-työkalut. Sen toimintaa ohjataan komentoriviparametreilla, jotka ovat muotoa `--komentoriviparametri` (toistaiseksi näillä pitkillä muodoilla ei ole vaihtoehtoisia lyhyitä muotoja, kuten `-km`).
+Ohjelman komentorivikäyttöliittymä toimii samalla periaatteella kuin tavanomaiset Unix-työkalut. Sen toimintaa ohjataan komentoriviparametreilla, jotka ovat muotoa `--komentoriviparametri` (toistaiseksi näillä pitkillä muodoilla ei ole vaihtoehtoisia lyhyitä muotoja, kuten `-km`). *Huomaa shell-tulkkien rajoitteet*: esim. Bash vaatii välilyöntien yhteydessä lainausmerkkien käytön (muuten välilyönti tulkitaan parametrin loppumiseksi) eikä sen erikoismerkkejä (kuten '!') voi lainkaan käyttää esim. viestin osana, kun se annetaan suoraan komentoriviltä. Erikoisempia merkkejä sisältävät viestit voi kuitenkin kirjoittaa tiedostoon, josta viestin voi lukea `--input` parametrilla.
 
-Shell-skripti _tiralabraRSA_ passaa annetut komentoriviparametrit edelleen varsinaiselle komentorivikäyttöliittymälle. Ellet halua kutsua tätä muodossa `./tiralabraRSA`, lisää ohjelman kansio väliaikaisesti PATH-muuttujaan: `export PATH="$PATH:."`. Shell-skripti on myös määritettävä ajettavaksi: `chmod +x tiralabra`.
+Shell-skripti _tiralabraRSA_ passaa annetut komentoriviparametrit edelleen varsinaiselle komentorivikäyttöliittymälle. Ellet halua kutsua tätä muodossa `./tiralabraRSA`, lisää ohjelman kansio väliaikaisesti PATH-muuttujaan: `export PATH="$PATH:."`. Shell-skripti on myös määritettävä ajettavaksi: `chmod +x tiralabraRSA`.
 
 * Uusien RSA-avainten luominen
 ```

@@ -1,12 +1,11 @@
 import argparse
+import io
+import unittest
 from create_keys import create_new_RSA_keys
 from encryptions import encrypt_message,decrypt_message
 import key_objects
 from message_objects import Message
-
-import unittest
 import Testit.verifytests
-import io
 
 cli_parser = argparse.ArgumentParser(description='CLI for tiralabraRSA: create RSA keys, encrypt and decrypt messages')
 

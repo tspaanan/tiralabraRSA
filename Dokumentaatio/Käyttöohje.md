@@ -2,7 +2,7 @@
 
 Ohjelman komentorivikäyttöliittymä toimii samalla periaatteella kuin tavanomaiset Unix-työkalut. Sen toimintaa ohjataan komentoriviparametreilla, jotka ovat muotoa `--komentoriviparametri` (toistaiseksi näillä pitkillä muodoilla ei ole vaihtoehtoisia lyhyitä muotoja, kuten `-km`).
 
-Shell-skripti _tiralabraRSA_ passaa annetut komentoriviparametrit edelleen varsinaiselle komentorivikäyttöliittymälle. Ellet halua kutsua tätä muodossa `./tiralabraRSA`, lisää ohjelman kansio väliaikaisesti PATH-muuttujaan: `export PATH="$PATH:."`
+Shell-skripti _tiralabraRSA_ passaa annetut komentoriviparametrit edelleen varsinaiselle komentorivikäyttöliittymälle. Ellet halua kutsua tätä muodossa `./tiralabraRSA`, lisää ohjelman kansio väliaikaisesti PATH-muuttujaan: `export PATH="$PATH:."`. Shell-skripti on myös määritettävä ajettavaksi: `chmod +x tiralabra`.
 
 * Uusien RSA-avainten luominen
 ```

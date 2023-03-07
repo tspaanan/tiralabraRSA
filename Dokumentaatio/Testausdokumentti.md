@@ -13,7 +13,7 @@
 
 Ohjelman testiautomaatiossa käytetään unittest-kirjastoa.
 
-Ohjelman automaattiset yksikkötestit käynnistetään seuraavasti`(Shell-skripti on ensin määritettävä ajettavaksi: `chmod +x run_unittests.sh`):
+Ohjelman automaattiset yksikkötestit käynnistetään seuraavasti (Shell-skripti on ensin määritettävä ajettavaksi: `chmod +x run_unittests.sh`):
 
 ```
 ./run_unittests.sh

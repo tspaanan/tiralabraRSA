@@ -1,6 +1,6 @@
+from secrets import randbelow,randbits
 import algorithms
 import key_objects
-from secrets import randbelow,randbits
 
 def _create_prime_number(prime_number_length):
     while True:

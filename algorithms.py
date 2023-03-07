@@ -1,8 +1,8 @@
 from math import isqrt
 from secrets import randbelow
 
-#Euclidean algorithm calculates the Greatest Common Divisor of two integers
 def Euclidean_algorithm(larger_int, smaller_int):
+    """Euclidean algorithm calculates the Greatest Common Divisor of two integers"""
     result = -1
     while result != 0:
         temp_int = larger_int // smaller_int
@@ -13,9 +13,9 @@ def Euclidean_algorithm(larger_int, smaller_int):
     #GCD is the last result that was not zero
     return larger_int
 
-#Euclidean extended algorithm calculates the Greatest Common Divisor of two integers
-#and Bézout coefficients
 def Extended_Euclidean_algorithm(larger_int, smaller_int):
+    """Euclidean extended algorithm calculates the Greatest Common Divisor of two integers
+    and Bézout coefficients"""
     result = -1
     bco_s1, bco_s2 = 0, 1
     bco_t1, bco_t2 = 1, 0
@@ -40,16 +40,13 @@ def _factoring_out_powers_of_2(base_integer):
         halved_integer = halved_integer // 2
     return (halved_integer, base_integer // halved_integer)
 
-#Miller-Rabin test finds out if an integer is a prime number with high probability
-#Implementation follows the principles in Cormen, Thomas H.; Leiserson, Charles E.;
-#Rivest, Ronald L.; Stein, Clifford (2009) [1990]. "31". Introduction to Algorithms
-# (3rd ed.). MIT Press and McGraw-Hill. pp. 968–971
 def Miller_Rabin_test(prime_candidate, nbr_of_rounds):
+    """Miller-Rabin test finds out if an integer is a prime number with high probability"""
     if prime_candidate in [2,3]:
         return True
     if prime_candidate < 2 or prime_candidate % 2 == 0:
         return False
-    
+
     #pruning prime_candidates before Miller-Rabin test
     with open('prime_numbers','r') as file_object:
         list_of_primes = [int(line.strip()) for line in file_object]
@@ -58,9 +55,9 @@ def Miller_Rabin_test(prime_candidate, nbr_of_rounds):
                 break
             if prime_candidate % prime == 0:
                 return False
-    
+
     previous_even = prime_candidate - 1
-    
+
     d, s = _factoring_out_powers_of_2(previous_even)
 
     for _ in range(nbr_of_rounds):

@@ -25,4 +25,4 @@ Salauksessa voi myös käyttää havainnollistamistarkoituksessa `--no_padding` 
 tiralabraRSA --decrypt --key secret_key --input encrypted_message --output screen
 ```
 
-Ohjelma purkaa tiedoston _encrypted_message_ tekstimuotoisen sisällön salausavaimella _secret_key_. Selväkielinen viesti tulostetaan näytölle. `--output` komentoriviparametrilla voi antaa antaa halutun tiedoston nimen, jolloin purettu viesti kirjoitetaan tähän tiedostoon.
+Ohjelma purkaa tiedoston _encrypted_message_ tekstimuotoisen sisällön salausavaimella _secret_key_. Selväkielinen viesti tulostetaan näytölle. `--output` komentoriviparametrilla voi myös antaa halutun tiedoston nimen, jolloin purettu viesti kirjoitetaan tähän tiedostoon.

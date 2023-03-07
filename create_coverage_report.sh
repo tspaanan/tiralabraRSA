@@ -1,11 +1,11 @@
 #!/bin/sh
 $(python --version 2> /dev/null)
 if [ $? -eq 127 ]; then
-    python3 -m coverage run --branch -m unittest Testit/unittests.py Testit/endtoendtests.py
+    python3 -m coverage run --branch -m unittest Testit/unittests.py Testit/endtoendtests.py -b
     python3 -m coverage html
     python3 -m coverage report --format=markdown
 else
-    python -m coverage run --branch -m unittest Testit/unittests.py Testit/endtoendtests.py
+    python -m coverage run --branch -m unittest Testit/unittests.py Testit/endtoendtests.py -b
     python -m coverage html
     python -m coverage report --format=markdown
 fi

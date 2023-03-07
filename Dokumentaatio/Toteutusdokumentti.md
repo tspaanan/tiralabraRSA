@@ -22,10 +22,10 @@ Määrittelydokumentissa kuvatusta ohjelmasta jäi ennen muuta puuttumaan upea g
 
 ## Lähteet
 
-Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest ja Clifford Stein. _Introduction to Algorithms_ (3. laitos, 2009), ss. 968–971.
-Alfred J. Menezes,  Paul C. van Oorschot ja Scott A. Vanstone. _Handbook of Applied Cryptography_ (5. laitos, 2001), s. 67.
-[RFC 8017](https://www.rfc-editor.org/rfc/rfc8017#section-7.2).
+* Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest ja Clifford Stein. _Introduction to Algorithms_ (3. laitos, 2009), ss. 968–971.
+* Alfred J. Menezes,  Paul C. van Oorschot ja Scott A. Vanstone. _Handbook of Applied Cryptography_ (5. laitos, 2001), s. 67.
+* [RFC 8017](https://www.rfc-editor.org/rfc/rfc8017#section-7.2).
 
-Yleiskuva eri aiheista sekä linkit yllä mainittuihin lähteisiin ovat pääsääntöisesti löytyneet Wikipedian aihekohtaisilta sivuilta.
+* Yleiskuva eri aiheista sekä linkit yllä mainittuihin lähteisiin ovat pääsääntöisesti löytyneet Wikipedian aihekohtaisilta sivuilta.
 
-Kattavin yleisesitys aiheesta sekä lukuisia vinkkejä sen teknisen toteutuksen yksityiskohdista ovat löytyneet David Ireland'in luotsaaman [DI Management Services](https://www.di-mgt.com.au) -yrityksen kotisivuilta.
+* Kattavin yleisesitys aiheesta sekä lukuisia vinkkejä sen teknisen toteutuksen yksityiskohdista ovat löytyneet David Ireland'in luotsaaman [DI Management Services](https://www.di-mgt.com.au) -yrityksen kotisivuilta.
